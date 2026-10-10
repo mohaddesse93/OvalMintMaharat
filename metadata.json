@@ -1,0 +1,6 @@
+{
+  "name": "OvalMintMaharat",
+  "description": "Tactile pill buttons and interactive components with layered depth and forest aesthetics",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

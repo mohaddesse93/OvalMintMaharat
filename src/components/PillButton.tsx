@@ -6,6 +6,7 @@ export type PillVariant =
   | "forest"
   | "pine"
   | "jade"
+  | "emerald"
   | "sage"
   | "mist";
 
@@ -41,6 +42,13 @@ const variants: Record<
       "shadow-[0_18px_30px_-10px_rgba(0,0,0,0.82),0_6px_10px_-4px_rgba(0,0,0,0.62),inset_0_1px_0_rgba(255,255,255,0.12),inset_0_-2px_4px_rgba(0,0,0,0.32)]",
     highlight: "from-white/12",
   },
+  emerald: {
+    base: "bg-[#45745E]",
+    text: "text-[#DAF1DE]",
+    shadow:
+      "shadow-[0_18px_30px_-10px_rgba(0,0,0,0.8),0_6px_10px_-4px_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.18),inset_0_-2px_4px_rgba(0,0,0,0.28)]",
+    highlight: "from-white/18",
+  },
   sage: {
     base: "bg-[#8EB69B]",
     text: "text-[#051F20]",
@@ -58,10 +66,10 @@ const variants: Record<
 };
 
 const sizes = {
-  sm: "h-12 px-8 text-sm",
-  md: "h-16 px-12 text-base",
-  lg: "h-24 px-16 text-lg",
-  xl: "h-24 px-16 text-lg sm:h-28 sm:px-20 sm:text-xl",
+  sm: "h-10 px-4 text-xs sm:h-12 sm:px-6 sm:text-sm",
+  md: "h-12 px-5 text-sm sm:h-14 sm:px-6 sm:text-base",
+  lg: "h-14 px-6 text-sm sm:h-16 sm:px-8 sm:text-base md:h-18 md:px-10 md:text-lg",
+  xl: "h-14 px-6 text-sm sm:h-16 sm:px-8 sm:text-base lg:h-20 xl:h-22 lg:px-10 lg:text-lg",
 };
 
 export interface PillButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

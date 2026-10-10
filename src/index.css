@@ -1,1 +1,132 @@
 @import "tailwindcss";
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: "Vazirmatn", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes float-grid {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes float-pill-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0.2deg);
+  }
+}
+
+@keyframes float-pill-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(-0.2deg);
+  }
+}
+
+@keyframes float-pill-3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(0.15deg);
+  }
+}
+
+@keyframes float-pill-4 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(-0.15deg);
+  }
+}
+
+.animate-float-grid {
+  animation: float-grid 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.float-node-1 {
+  animation: float-pill-1 5.4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.float-node-2 {
+  animation: float-pill-2 6.2s ease-in-out -1.8s infinite;
+  will-change: transform;
+}
+
+.float-node-3 {
+  animation: float-pill-3 5.8s ease-in-out -3.2s infinite;
+  will-change: transform;
+}
+
+.float-node-4 {
+  animation: float-pill-4 6.6s ease-in-out -2.4s infinite;
+  will-change: transform;
+}
+
+.float-node-5 {
+  animation: float-pill-1 5.2s ease-in-out -4.1s infinite;
+  will-change: transform;
+}
+
+.float-node-6 {
+  animation: float-pill-2 6.5s ease-in-out -1.2s infinite;
+  will-change: transform;
+}
+
+.float-node-center {
+  animation: float-pill-3 6.0s ease-in-out -2.8s infinite;
+  will-change: transform;
+}
+
+/* ======================================================== */
+/* ORBITAL REVOLUTION ANIMATIONS                            */
+/* ======================================================== */
+
+@keyframes orbit-rotate-cw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-orbit-ring {
+  animation: orbit-rotate-cw 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-orbit-counter {
+  animation: orbit-counter-rotate 45s linear infinite;
+  will-change: transform;
+}
+
+.pause-on-hover:hover .animate-orbit-ring,
+.pause-on-hover:hover .animate-orbit-counter {
+  animation-play-state: paused;
+}
